@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/{id}', [App\Http\Controllers\LinkController::class, 'show'])->name('link.detail');
+Route::get('/link/store', [App\Http\Controllers\LinkController::class, 'store'])->name('link.store');
